@@ -1,0 +1,22 @@
+import './App.css'
+
+interface TodoProp{
+  title : string;
+  description : string;
+  done : boolean;
+}
+function Todos(props : TodoProp){
+  return (
+  <p>
+    {props.title} , {props.description} ,{props.done.toString()}
+  </p>)
+}
+
+function App() {
+  return (
+   <>
+        <Todos title='go to gym' description='workout for a hour' done={true} />
+   </>
+  );
+}
+export default App
